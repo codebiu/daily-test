@@ -1,0 +1,18 @@
+[project]
+name = "aa_py_tools"  # 项目名称
+version = "0.1.0"  # 项目版本号
+authors = [
+    {name="Your Name", email="your.email@example.com"},  # 作者信息
+]
+description = "A simple Python package example"  # 项目描述
+readme = "README.md"  # 项目README文件路径
+requires-python = ">=3.7"  # 支持的Python版本
+
+[tool.setuptools]
+packages = ["src"]       # 明确指定要包含的包
+package-dir = {"src" = "src"}  # 指定包目录
+
+[project.scripts]
+# 命令行工具的入口点 ，格式为 "模块路径:函数名", 可以指定命令行工具的名称
+# 终端输入'aa_py_tools_0'时，会调用demo_tool_package包中__init__.py文件里的repeat函数
+aa_py_tools = "src.cli:main"  # 命令行工具入口
