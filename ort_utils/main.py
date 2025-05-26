@@ -1,5 +1,5 @@
 def main():
-    print("Hello from uv-test!")
+    print("Hello from ort-utils!")
 
 
 if __name__ == "__main__":
